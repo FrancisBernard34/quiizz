@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Quiizz - Test Your Knowledge</title>
+        <link rel="stylesheet" href="styles.css" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        />
+    </head>
+    <body class="light-mode">
+        <div class="container">
+            <header>
+                <h1>Quiizz</h1>
+                <div class="theme-toggle">
+                    <i class="fas fa-sun"></i>
+                    <label class="switch">
+                        <input type="checkbox" id="theme-switch" />
+                        <span class="slider round"></span>
+                    </label>
+                    <i class="fas fa-moon"></i>
+                </div>
+            </header>
+
+            <main>
+                <section id="welcome-screen" class="screen active">
+                    <h2>Welcome to Quiizz!</h2>
+                    <p>Test your knowledge with our fun quizzes</p>
+                    <button id="start-btn" class="btn">Start Quiz</button>
+                </section>
+
+                <section id="quiz-screen" class="screen">
+                    <div class="quiz-header">
+                        <div class="quiz-info">
+                            <span id="question-number">Question 1/10</span>
+                            <span id="timer">00:30</span>
+                        </div>
+                        <div class="progress-container">
+                            <div id="progress-bar" class="progress-bar"></div>
+                        </div>
+                    </div>
+
+                    <div class="question-container">
+                        <h2 id="question-text">
+                            Question text will appear here
+                        </h2>
+                        <div
+                            id="answers-container"
+                            class="answers-container"
+                        ></div>
+                    </div>
+
+                    <div class="quiz-controls">
+                        <button id="next-btn" class="btn">Next Question</button>
+                    </div>
+                </section>
+
+                <section id="results-screen" class="screen">
+                    <h2>Quiz Results</h2>
+                    <div class="result-summary">
+                        <div class="score-circle">
+                            <span id="score-percentage">0%</span>
+                        </div>
+                        <p>
+                            You scored <span id="correct-answers">0</span> out
+                            of <span id="total-questions">10</span> questions
+                            correctly.
+                        </p>
+                    </div>
+                    <div class="result-details">
+                        <h3>Performance Summary</h3>
+                        <div id="performance-summary"></div>
+                    </div>
+                    <div class="result-actions">
+                        <button id="retry-btn" class="btn">Try Again</button>
+                        <button id="home-btn" class="btn btn-secondary">
+                            Back to Home
+                        </button>
+                    </div>
+                </section>
+            </main>
+
+            <footer>
+                <p>&copy; 2020 Quiizz App. All rights reserved.</p>
+            </footer>
+        </div>
+
+        <script src="script.js"></script>
+    </body>
+</html>
